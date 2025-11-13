@@ -1,7 +1,7 @@
 <x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create Role') }}
+            {{ __('Create Permission') }}
         </h2>
     </x-slot>
 
@@ -15,7 +15,7 @@
                     <form action="{{ route('admin.permissions.store') }}" method="POST" class="space-y-6">
                         @csrf
                         <div class="sm:col-span-4">
-                            <label for="name" class="block text-sm font-medium text-gray-900">Role</label>
+                            <label for="name" class="block text-sm font-medium text-gray-900">Permission</label>
                             <div class="mt-2">
                                 <div class="flex items-center rounded-md bg-gray-100 pl-3 outline-1 -outline-offset-1 outline-white/10 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-500">
                                     <input id="name" type="text" name="name" placeholder="can edit" class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-500 focus:outline-none sm:text-sm" />

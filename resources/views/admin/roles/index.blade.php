@@ -36,11 +36,11 @@
                                         {{ $role->guard_name }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
-                                        <form action="" method="POST" class="inline">
+                                        <a class="items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150" href="{{ route('admin.roles.edit', $role->id) }}" class="font-medium text-blue-600 hover:underline">Edit</a>
+                                        <form action="{{ route('admin.roles.destroy', $role->id) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="font-medium text-red-600 hover:underline">Delete</button>
+                                            <x-danger-button type="submit" class="font-medium text-red-600 hover:underline">Delete</x-danger-button>
                                         </form>
                                     </td>
                                 </tr>
