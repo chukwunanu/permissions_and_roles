@@ -53,11 +53,14 @@
                 </button>
             </div>
             <nav :class="{'block': open, 'hidden': !open}" class="flex-grow px-4 pb-4 md:block md:pb-0 md:overflow-y-auto">
+                <x-admin-links :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
+                    {{ __('Roles') }}
+                </x-admin-links>
                 <x-admin-links :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.index')">
                     {{ __('Permissions') }}
                 </x-admin-links>
-                <x-admin-links :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
-                    {{ __('Roles') }}
+                <x-admin-links :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">
+                    {{ __('Users') }}
                 </x-admin-links>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
